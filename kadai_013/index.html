@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organic Cafe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input class="menu-toggle" type="checkbox" id="menu-toggle">
+
+  <header class="site-header">
+    <a class="site-logo" href="#" aria-label="Organic Cafe トップ">
+      <picture>
+        <source media="(max-width: 767px)" srcset="images/logo-sp.png">
+        <img src="images/logo.png" alt="Organic Cafe">
+      </picture>
+    </a>
+
+    <nav class="desktop-nav" aria-label="メインナビゲーション">
+      <a href="#concept">CONCEPT</a>
+      <a href="#product">PRODUCT</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+
+    <label class="menu-button" for="menu-toggle">
+      <img src="images/button-menu.png" alt="メニューを開く">
+    </label>
+  </header>
+
+  <main>
+    <section class="hero" id="concept">
+      <div class="hero-copy">
+        <h1>Organic Cafe</h1>
+        <p>自家焙煎コーヒーが買えるお店</p>
+      </div>
+      <img class="hero-image" src="images/main-image.jpg" alt="ハンドドリップでコーヒーを淹れている様子">
+    </section>
+  </main>
+
+  <aside class="mobile-menu" aria-label="スマートフォンメニュー">
+    <label class="close-button" for="menu-toggle">
+      <img src="images/button-close.png" alt="メニューを閉じる">
+    </label>
+    <img class="mobile-menu-logo" src="images/logo-sp.png" alt="Organic Cafe">
+    <nav>
+      <a href="#concept"><span>CONCEPT</span><img src="images/arrow.png" alt=""></a>
+      <a href="#product"><span>PRODUCT</span><img src="images/arrow.png" alt=""></a>
+      <a href="#contact"><span>CONTACT</span><img src="images/arrow.png" alt=""></a>
+    </nav>
+  </aside>
+  <label class="menu-overlay" for="menu-toggle" aria-hidden="true"></label>
+</body>
+</html>

@@ -1,0 +1,221 @@
+:root {
+  --accent: #cf8d39;
+  --text: #1b1b1b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN",
+    Meiryo, Arial, sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 1080px;
+    min-width: 960px;
+    margin: 0 auto;
+  }
+
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+    .hero-copy {
+    margin-top: 30px;
+  }
+  
+
+  .site-logo img {
+    display: block;
+    width: 184px;
+    height: 48px;
+  }
+
+  .desktop-nav {
+    display: block;
+    padding-top: 15px;
+    text-align: right;
+    font-size: 14px;
+  }
+
+  .desktop-nav a {
+    margin-left: 20px;
+    color: #0d0d0d;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  .desktop-nav a:hover {
+    text-decoration: underline;
+  }
+}
+
+.desktop-nav a:hover,
+.desktop-nav a:focus-visible {
+  color: var(--accent);
+}
+
+.hero-copy h1 {
+  margin: 0 0 24px;
+  font-size: 32px;
+  line-height: 1.4;
+}
+
+.hero-copy p {
+  margin: 0 0 20px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.menu-toggle,
+.menu-button,
+.mobile-menu,
+.menu-overlay {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .site-header,
+  main {
+    width: 100%;
+  }
+
+  .site-header {
+    min-height: 60px;
+    padding-left: 16px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .site-logo img {
+    width: 136px;
+    height: 40px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-button {
+    display: grid;
+    width: 72px;
+    height: 60px;
+    place-items: center;
+    cursor: pointer;
+    background: var(--accent);
+  }
+
+  .menu-button img {
+    display: block;
+    width: 72px;
+    height: 56px;
+  }
+
+  .hero-copy {
+    padding: 17px 16px 16px;
+  }
+
+  .hero-copy h1 {
+    margin-bottom: 14px;
+    font-size: 18px;
+  }
+
+  .hero-copy p {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .hero-image {
+    aspect-ratio: 3 / 2;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    z-index: 20;
+    inset: 0 0 0 auto;
+    display: block;
+    width: min(88vw, 420px);
+    padding: 86px 24px 32px;
+    background: var(--accent);
+    transform: translateX(100%);
+    transition: transform 240ms ease;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    display: block;
+    width: 29px;
+    height: 29px;
+    cursor: pointer;
+  }
+
+  .close-button img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mobile-menu-logo {
+    display: block;
+    width: 136px;
+    height: 40px;
+    margin-bottom: 34px;
+    filter: brightness(0) invert(1);
+  }
+
+  .mobile-menu nav {
+    display: grid;
+  }
+
+  .mobile-menu nav a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 48px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .mobile-menu nav img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+    background: rgb(0 0 0 / 28%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 240ms ease;
+  }
+
+  .menu-toggle:checked ~ .mobile-menu {
+    transform: translateX(0);
+  }
+
+  .menu-toggle:checked ~ .menu-overlay {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
