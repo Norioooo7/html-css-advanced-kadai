@@ -7,25 +7,58 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <input class="menu-toggle" type="checkbox" id="menu-toggle">
-
   <header class="site-header">
-    <a class="site-logo" href="#" aria-label="Organic Cafe トップ">
-      <picture>
-        <source media="(max-width: 767px)" srcset="images/logo-sp.png">
-        <img src="images/logo.png" alt="Organic Cafe">
-      </picture>
+    <a class="site-logo" href="index.html">
+      <img src="images/logo.png" alt="Organic Cafe">
     </a>
 
-    <nav class="desktop-nav" aria-label="メインナビゲーション">
-      <a href="#concept">CONCEPT</a>
-      <a href="#product">PRODUCT</a>
-      <a href="#contact">CONTACT</a>
+    <nav id="nav-pc">
+      <a href="index.html#concept">CONCEPT</a>
+      <a href="index.html#product">PRODUCT</a>
+      <a href="index.html#contact">CONTACT</a>
     </nav>
 
-    <label class="menu-button" for="menu-toggle">
-      <img src="images/button-menu.png" alt="メニューを開く">
-    </label>
+    <img
+      id="menu-sp"
+      src="images/button-menu.png"
+      alt="ナビゲーションを開く"
+      onclick="document.getElementById('nav-sp').style.display = 'block'"
+    >
+
+    <nav id="nav-sp">
+      <img
+        id="close"
+        src="images/button-close.png"
+        alt="ナビゲーションを閉じる"
+        onclick="document.getElementById('nav-sp').style.display = 'none'"
+      >
+
+      <a
+        id="logo-sp"
+        href="index.html"
+        onclick="document.getElementById('nav-sp').style.display = 'none'"
+      >
+        <img src="images/logo-sp.png" alt="トップページに戻る">
+      </a>
+
+      <a
+        class="menu"
+        href="index.html#concept"
+        onclick="document.getElementById('nav-sp').style.display = 'none'"
+      >CONCEPT</a>
+
+      <a
+        class="menu"
+        href="index.html#product"
+        onclick="document.getElementById('nav-sp').style.display = 'none'"
+      >PRODUCT</a>
+
+      <a
+        class="menu"
+        href="index.html#contact"
+        onclick="document.getElementById('nav-sp').style.display = 'none'"
+      >CONTACT</a>
+    </nav>
   </header>
 
   <main>
@@ -37,18 +70,5 @@
       <img class="hero-image" src="images/main-image.jpg" alt="ハンドドリップでコーヒーを淹れている様子">
     </section>
   </main>
-
-  <aside class="mobile-menu" aria-label="スマートフォンメニュー">
-    <label class="close-button" for="menu-toggle">
-      <img src="images/button-close.png" alt="メニューを閉じる">
-    </label>
-    <img class="mobile-menu-logo" src="images/logo-sp.png" alt="Organic Cafe">
-    <nav>
-      <a href="#concept"><span>CONCEPT</span><img src="images/arrow.png" alt=""></a>
-      <a href="#product"><span>PRODUCT</span><img src="images/arrow.png" alt=""></a>
-      <a href="#contact"><span>CONTACT</span><img src="images/arrow.png" alt=""></a>
-    </nav>
-  </aside>
-  <label class="menu-overlay" for="menu-toggle" aria-hidden="true"></label>
 </body>
 </html>
